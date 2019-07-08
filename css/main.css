@@ -219,12 +219,26 @@ body {
 }
 
 .distantland {
-  background:#558122;
+  background-image:url(../img/horizon.png);
+  background-size: 120%;
+  background-position: 50% 50%;
+  background-repeat:no-repeat;
   width:100vw;
   height:100vh;
   position:absolute;
   bottom:0;
   pointer-events: none;
+  animation: horizonpan 15s both;
+}
+
+@keyframes horizonpan{
+  from {
+    background-position: 0% 70%;
+  }
+
+  to {
+    background-position: 50% 40%;
+  }
 }
 
 .snow {
@@ -243,7 +257,7 @@ body {
   }
 
   100%{
-     transform: rotateX(-103deg) rotateZ(0deg);
+     transform: rotateX(-105deg) rotateZ(0deg);
   }
 }
 
@@ -251,9 +265,9 @@ body {
   transform-style: preserve-3d;
   transform: rotateX(-91deg) rotateZ(-15deg);
   width:100vw;
-  height:200vh;
+  height:300vh;
   position: absolute;
-  bottom:-50vh;
+  bottom:-100vh;
   transition: 300ms;
   background:#558122;
   display:flex;
